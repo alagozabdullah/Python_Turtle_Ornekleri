@@ -1,0 +1,17 @@
+import turtle
+import random
+
+kalem= turtle.Turtle()
+def renk_uret():
+    return "#{:02x}{:02x}{:02x}".format(random.randint(0,255), random.randint(0,255), random.randint(0,255))
+
+for _ in range (100):
+    kalem.color(renk_uret(), renk_uret())
+    kalem.begin_fill()
+    for _ in range (4):
+        kalem.forward(70)
+        kalem.left(90)
+    kalem.end_fill()
+    kalem.left(10)
+
+turtle.done()
